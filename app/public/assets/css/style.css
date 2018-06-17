@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(6, 123, 231);
+
+}
+
+.btn {
+    padding:5px;
+    margin-left: 25px;
+}
+
+.save {
+    padding-top: 10px;
+}
+
+#scrape {
+    background-color: rgb(78, 190, 33);
+}
+
+#banner {
+    text-align: center;
+}
+
+
+a {
+    color: #9c37a5;
+}
+
+nav {
+
+        background-color: rgba(255,255,255,0.5);
+        border-bottom: 1px black solid;
+}
+
+form {
+    margin-top:15px;
+}

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"> <- Back</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/saved">Saved</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sorting Options
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/date-sort">Sort by Most Recent</a>
+          <a class="dropdown-item" href="/alpha-sort">Sort Alphabetically</a>
+        </div>
+      </li>
+      <a id="scrape" class="nav-item nav-link" href="/scrape">Scrape
+        <span class="sr-only">(current)</span>
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+
+  <ol>
+
+    {{#each dbArticles}}
+    <a href={{link}}>
+      <h5>{{title}} </a>
+    {{#if saved}}
+    <button data-id={{_id}} type="button" class="save btn btn-success">Saved</button>
+    {{else}}
+    <button data-id={{_id}} type="button" class="save btn btn-info">Save</button>
+    {{/if}}
+    </h5>
+
+    <p>{{summary}}</p>
+    {{/each}}
+
+  </ol>
+
+</div>

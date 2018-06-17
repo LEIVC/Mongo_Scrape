@@ -1,0 +1,29 @@
+{
+  "name": "Mongo_Scrape",
+  "version": "1.0.0",
+  "description": "### Overview",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEIVC/Mongo_Scrape.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LEIVC/Mongo_Scrape/issues"
+  },
+  "homepage": "https://github.com/LEIVC/Mongo_Scrape#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express3-handlebars": "^0.5.2",
+    "mongoose": "^5.1.5",
+    "request": "^2.87.0"
+  }
+}
