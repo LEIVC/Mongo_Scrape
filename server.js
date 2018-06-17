@@ -1,12 +1,19 @@
+// Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var mongojs = require("mongojs");
 var mongoose = require("mongoose");
 var cheerio = require("cheerio");
 var request = require("request");
 
-
+// Initialize express
 var app = express();
+
+// Database configuration
+var databaseUrl = "scraper";
+var collections = ["scrapedData"];
+
 var PORT = process.env.PORT || 8080;
 
 
@@ -22,11 +29,11 @@ app.use(bodyParser.json());
 
 // Set handlebars
 // var exphbs = require("express-handlebars");
-// app.engine('handlebars', exphbs({
+app.engine('handlebars', exphbs({
     defaultLayout: 'main',
-    // layoutsDir: path.join(__dirname, "/app/views/layouts/"),
-    // partialsDir: path.join(__dirname, "/app/views/partials/")
-//   }));
+    layoutsDir: path.join(__dirname, "/app/views/layouts/"),
+    partialsDir: path.join(__dirname, "/app/views/partials/")
+  }));
 app.set("view engine", "handlebars");
 // app.set('views', path.join(__dirname, "/app/views"));
 
